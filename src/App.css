@@ -1,38 +1,236 @@
-.App {
+/* Set up a consistent color scheme */
+:root {
+  --primary-color: #563d7c;
+  --secondary-color: #ffcd38;
+  --text-color: #333;
+}
+
+/* Use typography to create hierarchy */
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+/* Add some animations */
+.btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+/* Add some white space */
+.container {
+  padding: 2rem;
+}
+
+/* Make the hangman elements larger */
+.hangman {
+  width: 300px;
+  height: 300px;
+  margin: 2rem auto;
+}
+
+.head {
+  width: 120px;
+  height: 120px;
+  margin-top: 80px;
+}
+
+.body {
+  width: 20px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.left-arm,
+.right-arm {
+  width: 70px;
+  height: 15px;
+  top: 140px;
+}
+
+.left-arm {
+  left: 50px;
+}
+
+.right-arm {
+  right: 50px;
+}
+
+.left-leg,
+.right-leg {
+  width: 70px;
+  height: 15px;
+  top: 200px;
+}
+
+.left-leg {
+  left: 90px;
+}
+
+.right-leg {
+  right: 90px;
+}
+
+/* Add styling for incorrect guesses */
+.incorrect-guesses {
+  font-size: 1.2rem;
+  color: red;
+  margin-top: 1rem;
+}
+
+/* Add styling for hint button */
+.hint-button {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  border: none;
+  background-color: transparent;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.hint-button:hover {
+  text-decoration: underline;
+}
+
+/* Add styling for sound button */
+.sound-button {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  border: none;
+  background-color: transparent;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.sound-button:hover {
+  text-decoration: underline;
+}
+
+/* Add styling for hint */
+.hint {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-top: 1rem;
+}
+
+/* Add styling for progress bar */
+.progress {
+  margin-top: 1rem;
+}
+
+
+
+
+
+/* SoundButton Component */
+
+button {
+  background-color: #fca311;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e5a00d;
+}
+
+audio {
+  display: none;
+}
+
+/* Scoreboard Component */
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* ParentComponent Component */
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #fca311;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e5a00d;
+}
+
+/* IncorrectGuesses Component */
+
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  font-size: 18px;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* HintButton Component */
+
+button {
+  background-color: #fca311;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button:hover {
+  background-color: #e5a00d;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* HangedComponent Component */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+img {
+  width: 40%;
 }
